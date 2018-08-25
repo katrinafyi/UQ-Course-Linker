@@ -1,1 +1,1 @@
-{"version":3,"file":"uq_course_linker.js","sourceRoot":"","sources":["../src/uq_course_linker.ts"],"names":[],"mappings":"AAAA,SAAS,IAAI;IACT,OAAO,MAAM,CAAC;AAClB,CAAC;AACD,OAAO,CAAC,GAAG,CAAC,IAAI,EAAE,CAAC,CAAC"}
+{"version":3,"file":"uq_course_linker.js","sourceRoot":"","sources":["../src/uq_course_linker.ts"],"names":[],"mappings":"AAAA,iBAAiB;AACjB,gCAAgC;AAChC,0BAA0B;AAC1B,yCAAyC;AACzC,uEAAuE;AACvE,qBAAqB;AACrB,2BAA2B;AAC3B,2BAA2B;AAC3B,8BAA8B;AAC9B,kBAAkB;AAIlB,SAAS,IAAI;IACT,OAAO,MAAM,CAAC;AAClB,CAAC;AAED,OAAO,CAAC,GAAG,CAAC,IAAI,EAAE,CAAC,CAAC"}
