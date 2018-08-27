@@ -1,0 +1,3 @@
+[submodule "UserscriptHeaderPlugin"]
+	path = UserscriptHeaderPlugin
+	url = ./../UserscriptHeaderPlugin/
