@@ -1,0 +1,27 @@
+{
+  "name": "uq-course-linker",
+  "version": "0.1.0",
+  "description": "Links UQ course codes to their course page.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "react": "^16.4.2",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.1",
+    "webpack-cli": "^3.1.0",
+    "webpack": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KentonLam/UQ-Course-Linker.git"
+  },
+  "author": "Kenton Lam",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KentonLam/UQ-Course-Linker/issues"
+  },
+  "homepage": "https://github.com/KentonLam/UQ-Course-Linker#readme"
+}
