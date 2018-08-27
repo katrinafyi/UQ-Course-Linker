@@ -1,3 +1,5 @@
+let UserscriptHeaderPlugin = require('./UserscriptHeaderPlugin/UserscriptHeaderPlugin');
+
 module.exports = (env, argv) => {
     let prod = argv.mode === 'production';
     return {
@@ -15,6 +17,9 @@ module.exports = (env, argv) => {
                 // all files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'
                 { test: /\.tsx?$/, loader: "ts-loader" }
             ]
-        }
-        }
+        },
+        plugins: [
+            new UserscriptHeaderPlugin({inputFile: './src/uq_course_linker.tsx'})
+        ]
+    }
 };
