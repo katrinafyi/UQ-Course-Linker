@@ -2,7 +2,7 @@
 
 On course pages, makes links to other courses clickable.
 
-![](https://i.imgur.com/S9kseg3.png)
+![](https://i.imgur.com/S9kseg3.png | width=634)
 
 ### Install 
 1. Get TamperMonkey 
