@@ -32,6 +32,12 @@ function replaceCourseCodes(element: HTMLElement): HTMLElement  {
         match = courseCodeRegex.exec(text);
     }
 
+    if (prevIndex < text.length) {
+        newElements.push(document.createTextNode(
+            text.substr(prevIndex, text.length-prevIndex)
+        ));
+    }
+
     while (element.hasChildNodes()) {
         element.removeChild(element.lastChild);
     }
