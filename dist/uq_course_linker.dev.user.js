@@ -2,7 +2,7 @@
 // @name        UQ Course Linker
 // @author      Kenton Lam
 // @description Makes course codes links.
-// @match       https://my.uq.edu.au/programs-courses/learn.uq.edu.au/*
+// @match       https://my.uq.edu.au/programs-courses/course.html?course_code=*
 // @version     0.1.0
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -92,19 +92,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/uq_course_linker.tsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/uq_course_linker.user.tsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/uq_course_linker.tsx":
-/*!**********************************!*\
-  !*** ./src/uq_course_linker.tsx ***!
-  \**********************************/
+/***/ "./src/uq_course_linker.user.tsx":
+/*!***************************************!*\
+  !*** ./src/uq_course_linker.user.tsx ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// ==UserScript==\r\n// @name        UQ Course Linker\r\n// @author      Kenton Lam\r\n// @description Makes course codes links.\r\n// @match       https://my.uq.edu.au/programs-courses/learn.uq.edu.au/*\r\n// @version     0.1.0\r\n// @grant       GM_getValue\r\n// @grant       GM_setValue\r\n// @grant       GM_deleteValue\r\n// ==/UserScript==\r\nvar courseCodeRegex = /[A-Z]{4}[0-9]{4}[A-Z]?/g;\r\nfunction replaceCourseCodes(element) {\r\n    console.log(element.textContent);\r\n    console.log(courseCodeRegex.exec(element.textContent));\r\n    return element;\r\n}\r\nfunction main() {\r\n    var elementIds = [\r\n        'course-prerequisite',\r\n        'course-companion',\r\n        'course-incompatible'\r\n    ];\r\n    for (var _i = 0, elementIds_1 = elementIds; _i < elementIds_1.length; _i++) {\r\n        var id = elementIds_1[_i];\r\n        var elem = document.getElementById(id);\r\n        if (elem != null) {\r\n            replaceCourseCodes(elem);\r\n        }\r\n    }\r\n}\r\nmain();\r\n\n\n//# sourceURL=webpack:///./src/uq_course_linker.tsx?");
+eval("// ==UserScript==\r\n// @name        UQ Course Linker\r\n// @author      Kenton Lam\r\n// @description Makes course codes links.\r\n// @match       https://my.uq.edu.au/programs-courses/course.html?course_code=*\r\n// @version     0.1.0\r\n// @grant       GM_getValue\r\n// @grant       GM_setValue\r\n// @grant       GM_deleteValue\r\n// ==/UserScript==\r\nfunction createCourseLink(courseCode) {\r\n    var a = document.createElement('a');\r\n    a.href = \"/programs-courses/course.html?course_code=\" + courseCode;\r\n    a.textContent = courseCode;\r\n    return a;\r\n}\r\nvar courseCodeRegex = /[A-Z]{4}[0-9]{4}[A-Z]?/g;\r\nfunction replaceCourseCodes(element) {\r\n    var newElements = [];\r\n    var prevIndex = 0;\r\n    var text = element.textContent;\r\n    var match = courseCodeRegex.exec(text);\r\n    while (match != null) {\r\n        newElements.push(document.createTextNode(text.substr(prevIndex, match.index - prevIndex)));\r\n        newElements.push(createCourseLink(match[0]));\r\n        prevIndex = match.index + match[0].length;\r\n        match = courseCodeRegex.exec(text);\r\n    }\r\n    while (element.hasChildNodes()) {\r\n        element.removeChild(element.lastChild);\r\n    }\r\n    for (var _i = 0, newElements_1 = newElements; _i < newElements_1.length; _i++) {\r\n        var newChild = newElements_1[_i];\r\n        element.appendChild(newChild);\r\n    }\r\n    return element;\r\n}\r\nfunction main() {\r\n    var elementIds = [\r\n        'course-prerequisite',\r\n        'course-companion',\r\n        'course-incompatible'\r\n    ];\r\n    for (var _i = 0, elementIds_1 = elementIds; _i < elementIds_1.length; _i++) {\r\n        var id = elementIds_1[_i];\r\n        var elem = document.getElementById(id);\r\n        if (elem != null) {\r\n            replaceCourseCodes(elem);\r\n        }\r\n    }\r\n}\r\nmain();\r\n\n\n//# sourceURL=webpack:///./src/uq_course_linker.user.tsx?");
 
 /***/ })
 

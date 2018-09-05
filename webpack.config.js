@@ -3,10 +3,10 @@ let UserscriptHeaderPlugin = require('./UserscriptHeaderPlugin/UserscriptHeaderP
 module.exports = (env, argv) => {
     let prod = argv.mode === 'production';
     return {
-        entry: "./src/uq_course_linker.tsx",
+        entry: "./src/uq_course_linker.user.tsx",
         mode: (prod?"production":"development"),
         output: {
-            filename: "uq_course_linker" + (prod?".js":".dev.js")
+            filename: "uq_course_linker" + (prod?".user.js":".dev.user.js")
         },
         resolve: {
             // Add '.ts' and '.tsx' as a resolvable extension.
@@ -19,7 +19,7 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
-            new UserscriptHeaderPlugin({inputFile: './src/uq_course_linker.tsx'})
+            new UserscriptHeaderPlugin({inputFile: './src/uq_course_linker.user.tsx'})
         ]
     }
 };

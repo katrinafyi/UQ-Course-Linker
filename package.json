@@ -4,11 +4,14 @@
   "description": "Links UQ course codes to their course page.",
   "main": "webpack.config.js",
   "dependencies": {
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
     "react": "^16.4.2",
-    "ts-loader": "^4.5.0",
+    "react-dom": "^16.4.2",
+    "ts-loader": "^5.0.0",
     "typescript": "^3.0.1",
-    "webpack-cli": "^3.1.0",
-    "webpack": "^4.17.1"
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   },
   "devDependencies": {},
   "scripts": {
