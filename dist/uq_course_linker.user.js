@@ -3,7 +3,7 @@
 // @author      Kenton Lam
 // @description Makes course codes links.
 // @match       https://my.uq.edu.au/programs-courses/course.html?course_code=*
-// @version     0.1.0
+// @version     0.1.1
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_deleteValue
@@ -14,7 +14,7 @@
 // @author      Kenton Lam
 // @description Makes course codes links.
 // @match       https://my.uq.edu.au/programs-courses/course.html?course_code=*
-// @version     0.1.0
+// @version     0.1.1
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_deleteValue
