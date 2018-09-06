@@ -1,6 +1,6 @@
 {
   "name": "uq-course-linker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Links UQ course codes to their course page.",
   "main": "webpack.config.js",
   "dependencies": {
