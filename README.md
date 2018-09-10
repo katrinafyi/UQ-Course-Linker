@@ -8,4 +8,4 @@ On course pages, makes links to other courses clickable.
 1. Get TamperMonkey 
 ([Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) 
 / [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)) or equivalent.
-2. Install the userscript by clicking this link: [uq_course_linker.user.js](https://github.com/KentonLam/UQ-Course-Linker/raw/master/dist/uq_course_linker.dev.user.js).
+2. Install the userscript by clicking this link: [uq_course_linker.user.js](https://github.com/KentonLam/UQ-Course-Linker/raw/master/dist/uq_course_linker.user.js).
